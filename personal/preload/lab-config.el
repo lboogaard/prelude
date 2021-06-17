@@ -1,3 +1,10 @@
+;; lab-config.el
+;;
+;; Additional packages that are preloaded (before prelude)
+;; mainly theme(s)
+;;
+;; Written by Leindert Boogaard
+
 ;; Bootstrap `use-package'
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
