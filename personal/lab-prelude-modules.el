@@ -4,6 +4,8 @@
 ;;
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: https://github.com/bbatsov/prelude
+;;
+;; Modified by Leindert Boogaard
 
 ;; This file is not part of GNU Emacs.
 
