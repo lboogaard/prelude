@@ -11,7 +11,7 @@
   (package-install 'use-package))
 
 
-;;
+;; Theme
 (use-package solarized-theme
              :ensure t
              :if window-system
@@ -36,3 +36,11 @@
 
              (setq prelude-theme 'solarized-light)
              )
+
+
+;; Font
+;; (set-frame-font "Menlo 12")                ; default
+(set-frame-font "Hack 12")
+;; (set-frame-font "Source Code Pro 12")
+;; (set-frame-font "Input Mono Narrow 12")
+;; (set-frame-font "Fira Code 12")
