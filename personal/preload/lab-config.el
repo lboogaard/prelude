@@ -37,6 +37,11 @@
              (setq prelude-theme 'solarized-light)
              )
 
+;; Fancy titlebar for MacOS matching the colorscheme
+(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+(add-to-list 'default-frame-alist '(ns-appearance . dark))
+(setq ns-use-proxy-icon  nil)
+(setq frame-title-format nil)
 
 ;; Font
 ;; (set-frame-font "Menlo 12")                ; default
