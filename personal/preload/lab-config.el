@@ -49,3 +49,8 @@
 ;; (set-frame-font "Source Code Pro 12")
 ;; (set-frame-font "Input Mono Narrow 12")
 ;; (set-frame-font "Fira Code 12")
+
+
+;; Additional Prelude modifications:
+(setq prelude-whitespace nil)
+
