@@ -54,3 +54,16 @@
 ;; Additional Prelude modifications:
 (setq prelude-whitespace nil)
 
+
+
+;; Finally, start server if not running as deamon
+;;------------------------------------------------------------------------------
+;; Start server
+;;------------------------------------------------------------------------------
+;; Better solution is to start an emacs-server and open files with emacsclient
+;; Finder now works with this and .bashrc contains and an alias Emacs to
+;; emacsclient (with some tricks)
+(use-package server
+  :if window-system ;; don't start server in terminal
+  :config
+  (unless (server-running-p) (server-start)))
