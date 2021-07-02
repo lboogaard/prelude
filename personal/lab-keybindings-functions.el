@@ -13,15 +13,13 @@
 ;;; Keybindings
 
 ;; the right key for magit-status
-(global-set-key (kbd "<f10>") 'magit-status)
+(define-key prelude-mode-map (kbd "<f10>") 'magit-status)
 
 ;; very useful; overwrites swap-super-and-meta
 (define-key prelude-mode-map (kbd "C-c w") 'delete-trailing-whitespace)
 
 ;; very useful; overwrites crux-visit-term-buffer
 (define-key prelude-mode-map (kbd "C-c t") 'toggle-truncate-lines)
-
-
 
 
 ;;; Functions
