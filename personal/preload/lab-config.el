@@ -66,4 +66,6 @@
 (use-package server
   :if window-system ;; don't start server in terminal
   :config
+  ;; if emacsclient cant find it, set the socket-dir manually
+  ;; (setq server-socket-dir (format "/tmp/emacs%d" (user-uid)))
   (unless (server-running-p) (server-start)))
