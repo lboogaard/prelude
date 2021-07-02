@@ -51,3 +51,20 @@
   ;; Rebind this then:
   (global-set-key (kbd "C-x \S-f") 'set-fill-column)
   )
+
+
+;; Conda to switch to the right conda environment for anaconda-mode
+(use-package conda
+  :ensure t
+  :init
+  (setq conda-anaconda-home (expand-file-name "/opt/miniconda3"))
+  (setq conda-env-home-directory (expand-file-name "/opt/miniconda3"))
+  ;; auto activate will only work under certain conditions, don't use it now
+  ;;(conda-env-autoactivate-mode t) ;;
+
+  ;; we can manually activate lab instead (note we could get right env
+  ;; from shell, if we would auto activate there)
+  ;; (conda-env-activate 'getenv "CONDA_DEFAULT_ENV")
+  (conda-env-activate "lab")
+  (setq-default mode-line-format (cons mode-line-format '(:exec conda-env-current-name)))
+  )
