@@ -12,14 +12,17 @@
 
 ;;; Keybindings
 
-;; the right key for magit-status
+;; a secondary key for magit-status
 (define-key prelude-mode-map (kbd "<f10>") 'magit-status)
 
-;; very useful; overwrites swap-super-and-meta
+;; note: overwrites swap-super-and-meta
 (define-key prelude-mode-map (kbd "C-c w") 'delete-trailing-whitespace)
 
-;; very useful; overwrites crux-visit-term-buffer
+;; note: overwrites crux-visit-term-buffer
 (define-key prelude-mode-map (kbd "C-c t") 'toggle-truncate-lines)
+
+;; useful besides helm-do-grep-ag
+(define-key helm-command-map (kbd "M-s a") 'helm-do-ag)
 
 
 ;;; Functions
