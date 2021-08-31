@@ -179,7 +179,7 @@
 ;; flyspell-mode does spell-checking on the fly as you type
 (require 'flyspell)
 (setq ispell-program-name "aspell" ; use aspell instead of ispell
-      ispell-extra-args '("--sug-mode=ultra"))
+      ispell-extra-args '("--sug-mode=normal")) ; more forgiving than ultra
 
 (defun prelude-enable-flyspell ()
   "Enable command `flyspell-mode' if `prelude-flyspell' is not nil."
