@@ -5,3 +5,7 @@
   ;; Below is needed to apply the modified `org-emphasis-regexp-components'
   ;; settings from above.
   (org-set-emph-re 'org-emphasis-regexp-components org-emphasis-regexp-components))
+
+;; update the default width=.9\linewidth in org-mode latex export
+(setq org-latex-image-default-width "0.95\\linewidth")
+
