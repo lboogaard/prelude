@@ -32,6 +32,7 @@
 
 (require 'org)
 (require 'org-habit)
+(require 'smartparens-org)
 
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
@@ -51,6 +52,7 @@
     (define-key newmap (kbd "C-c -") nil)
     (define-key newmap (kbd "C-a") 'org-beginning-of-line)
     (make-local-variable 'minor-mode-overriding-map-alist)
+    (smartparens-mode +1)  ;; use smartparens in org too
     (push `(prelude-mode . ,newmap) minor-mode-overriding-map-alist))
 )
 
