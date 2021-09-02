@@ -30,6 +30,12 @@
 
 ;;; Code:
 
+(require 'org)
+(require 'org-habit)
+(require 'smartparens-org)
+
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+
 ;; a few useful global keybindings for org-mode
 (global-set-key (kbd "C-c l") 'org-store-link)
 (global-set-key (kbd "C-c a") 'org-agenda)
@@ -52,7 +58,9 @@
     (define-key newmap (kbd "C-c -") nil)
     (define-key newmap (kbd "C-a") 'org-beginning-of-line)
     (make-local-variable 'minor-mode-overriding-map-alist)
-    (push `(prelude-mode . ,newmap) minor-mode-overriding-map-alist)))
+    (smartparens-mode +1)  ;; use smartparens in org too
+    (push `(prelude-mode . ,newmap) minor-mode-overriding-map-alist))
+)
 
 (add-hook 'prelude-org-mode-hook #'prelude-org-mode-defaults)
 
