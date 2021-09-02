@@ -24,6 +24,10 @@
 ;; useful besides helm-do-grep-ag
 (define-key helm-command-map (kbd "M-s a") 'helm-do-ag)
 
+;; consider binding some smartparens functions
+;; https://ebzzry.com/en/emacs-pairs/
+(define-key prelude-mode-map (kbd "M-[") 'sp-backward-unwrap-sexp)
+(define-key prelude-mode-map (kbd "M-]") 'sp-unwrap-sexp)
 
 ;;; Functions
 
