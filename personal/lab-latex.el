@@ -24,6 +24,8 @@
 (add-hook 'TeX-mode-hook (lambda ()
                            (add-to-list 'TeX-command-list '("LaTeX Make" "latexmk -pdf -f %t" TeX-run-TeX))
                            (add-to-list 'TeX-command-list '("LaTeX Make Bg" "latexmk -pvc -pdf -view=none %t" TeX-run-TeX))
+                           (add-to-list 'TeX-command-list '("LuaLaTeX Make" "latexmk -lualatex -pdflua -f %t" TeX-run-TeX))
+                           (add-to-list 'TeX-command-list '("LuaLaTeX Make Bg" "latexmk -pvc -lualatex -pdflua -view=none %t" TeX-run-TeX))
                            (setq TeX-command-default "LaTeX Make")))
 
 ;; Use Skim as pdf viewer (system default may be preview):
@@ -31,3 +33,16 @@
       '((output-pdf "Skim")))
 (setq TeX-view-program-list
       '(("Skim" "open -a skim %o")))
+
+
+;; Turn on RefTeX andn plugin to AUCTeX
+(require 'reftex)
+(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+(setq reftex-plug-into-AUCTeX t)
+;; Set my preferred citation styles
+(setq reftex-cite-format 'natbib)
+(setq reftex-ref-style-default-list '("Default" "Hyperref"))
+
+;; modify the e.g., in natbib https://tex.stackexchange.com/a/631387/81077)
+(setf (cdr (assoc ?e (caddr (assoc 'natbib reftex-cite-format-builtin))))
+      "\\citep[e.g.,][]{%l}")
