@@ -54,6 +54,8 @@
 ;; Additional Prelude modifications:
 (setq prelude-whitespace nil)
 
+;; Scrollbar is broken, so let's disable it
+(scroll-bar-mode -1)
 
 
 ;; Finally, start server if not running as deamon
