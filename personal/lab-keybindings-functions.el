@@ -83,16 +83,23 @@ vice-versa."
                 ",\\(\\s-*\\)" 1 1 t))
 
 (defun lab/align-point (start end)
-  "Align columns by comma"
+  "Align columns by point"
   (interactive "r")
   (align-regexp start end
                 ".\\(\\s-*\\)" 1 1 t))
 
 (defun lab/align-plus (start end)
-  "Align columns by comma"
+  "Align columns by plux"
   (interactive "r")
   (align-regexp start end
                 "+\\(\\s-*\\)" 1 1 t))
+
+(defun lab/align-pipe (start end)
+  "Align columns by pipe"
+  (interactive "r")
+  (align-regexp start end
+                "\\(\\s-*\\)|" 1 1 t))
+
 
 
 (defun lab/fill-or-unfill ()
