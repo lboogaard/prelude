@@ -57,8 +57,8 @@
 (use-package conda
   :ensure t
   :init
-  (setq conda-anaconda-home (expand-file-name "/opt/miniconda3"))
-  (setq conda-env-home-directory (expand-file-name "/opt/miniconda3"))
+  (setq conda-anaconda-home (expand-file-name "~/miniconda3"))
+  (setq conda-env-home-directory (expand-file-name "~/miniconda3"))
   ;; auto activate will only work under certain conditions, don't use it now
   ;;(conda-env-autoactivate-mode t) ;;
 
