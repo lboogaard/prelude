@@ -166,3 +166,16 @@ source: https://endlessparentheses.com/fill-and-unfill-paragraphs-with-a-single-
 (define-key lab/flyspell-map (kbd "d") 'lab/check-buffer-dutch)
 (define-key lab/flyspell-map (kbd "b") 'lab/check-buffer-british)
 (define-key lab/flyspell-map (kbd "a") 'lab/check-buffer-american)
+
+;; suggest original filename with helm write file by hitting C-j, as per here:
+;; https://emacs.stackexchange.com/questions/62730/save-current-file-with-a-slightly-different-name-in-helm#62819
+;; note in crux-rename-file, etc. you can use M-n (as normal)
+(defun helm-write-file ()
+  (interactive)
+  (let ((filename (helm-read-file-name
+                   "Write file: "
+                   :preselect (when (buffer-file-name)
+                                (helm-basename (buffer-file-name))))))
+    (write-file filename)))
+
+(global-set-key (kbd "C-x C-w") 'helm-write-file)
