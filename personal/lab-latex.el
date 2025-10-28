@@ -22,8 +22,8 @@
 
 ;; latexmk document compilation - http://tex.stackexchange.com/q/10561
 (add-hook 'TeX-mode-hook (lambda ()
-                           (add-to-list 'TeX-command-list '("LaTeX Make" "latexmk -pdf -f %t" TeX-run-TeX))
-                           (add-to-list 'TeX-command-list '("LaTeX Make Bg" "latexmk -pvc -pdf -view=none %t" TeX-run-TeX))
+                           (add-to-list 'TeX-command-list '("LaTeX Make" "latexmk -pdf -f -interaction=nonstopmode %t" TeX-run-TeX))
+                           (add-to-list 'TeX-command-list '("LaTeX Make Bg" "latexmk -pvc -pdf -view=none -interaction=nonstopmode %t" TeX-run-TeX))
                            (add-to-list 'TeX-command-list '("LuaLaTeX Make" "latexmk -lualatex -pdflua -f %t" TeX-run-TeX))
                            (add-to-list 'TeX-command-list '("LuaLaTeX Make Bg" "latexmk -pvc -lualatex -pdflua -view=none %t" TeX-run-TeX))
                            (setq TeX-command-default "LaTeX Make")))
