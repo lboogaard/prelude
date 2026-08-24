@@ -223,9 +223,11 @@ Used as advice around `kill-region', with ARGS being its arguments."
 (set-default 'imenu-auto-rescan t)
 
 ;; flyspell-mode does spell-checking on the fly as you type
-(require 'flyspell)
-(setq ispell-program-name "aspell" ; use aspell instead of ispell
-      ispell-extra-args '("--sug-mode=normal")) ; more forgiving than ultra
+(use-package flyspell
+  :defer t
+  :init
+  (setq ispell-program-name "aspell"   ; use aspell instead of ispell
+        ispell-extra-args '("--sug-mode=normal")))   ; more forgiving than ultra
 
 (defun prelude-enable-flyspell ()
   "Enable command `flyspell-mode' when Prelude's spell checker is Flyspell.
