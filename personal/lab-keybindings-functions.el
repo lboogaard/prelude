@@ -100,6 +100,13 @@ vice-versa."
   (align-regexp start end
                 "\\(\\s-*\\)|" 1 1 t))
 
+(defun lab/align-tab (start end)
+  "Align columns by pipe"
+  (interactive "r")
+  (align-regexp start end
+                "\\(\\s-*\\)\t" 1 1 t))
+
+
 
 
 (defun lab/fill-or-unfill ()
