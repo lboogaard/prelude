@@ -66,6 +66,7 @@
 ;; Modules for a few very common programming languages
 ;; are enabled by default.
 
+(require 'prelude-ai)
 (require 'prelude-c)
 ;; (require 'prelude-clojure)
 ;; (require 'prelude-coffee)
@@ -96,6 +97,7 @@
 (require 'prelude-web) ;; Emacs mode for web templates
 (require 'prelude-xml)
 (require 'prelude-yaml)
+
 
 ;;; Misc
 ;; (require 'prelude-erc) ;; A popular Emacs IRC client (useful if you're still into Freenode)
