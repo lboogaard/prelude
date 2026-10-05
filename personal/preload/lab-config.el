@@ -1,4 +1,4 @@
-;; lab-config.el
+;; lab-config.el  -*- lexical-binding: t; -*-
 ;;
 ;; Additional packages that are preloaded (before prelude)
 ;; mainly theme(s)

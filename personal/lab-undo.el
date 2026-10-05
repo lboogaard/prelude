@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 ;; I run into the c-stack overflow bug too frequently,
 ;; let's try something to fix it:
 ;; see: https://github.com/hlissner/doom-emacs/issues/1407#issuecomment-491931901

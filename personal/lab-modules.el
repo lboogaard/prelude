@@ -1,4 +1,4 @@
-;;; lab-modules.el
+;;; lab-modules.el -*- lexical-binding: t; -*-
 ;;
 ;; Custom packages not included in prelude
 ;;

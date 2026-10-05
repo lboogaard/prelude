@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 ;; texcount word count (note: needs the extra space behind additional options)
 ;; http://superuser.com/questions/125027/word-count-for-latex-within-emacs
 ;; Note that the number of words in a region can be counted with M-= in any mode.

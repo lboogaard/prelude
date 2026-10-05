@@ -1,4 +1,4 @@
-;;; lab-keybindings-functions.el
+;;; lab-keybindings-functions.el -*- lexical-binding: t; -*-
 ;;
 ;; Additional keybindings and functions
 ;;

@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 (with-eval-after-load 'org
   ;; Allow multiple line Org emphasis markup.
   ;; http://emacs.stackexchange.com/a/13828/115
