@@ -68,3 +68,18 @@
   (conda-env-activate "lab")
   (setq-default mode-line-format (cons mode-line-format '(:exec conda-env-current-name)))
   )
+
+
+;; copilot; via here: https://github.com/copilot-emacs/copilot.el
+;; setup copilot on github
+;; $ brew install copilot-language-server first
+(use-package copilot
+  :ensure t
+;;  :hook (prog-mode . copilot-mode)
+  :bind (:map copilot-completion-map
+              ("<tab>" . copilot-accept-completion)
+              ("TAB" . copilot-accept-completion)
+              ("C-<tab>" . copilot-accept-completion-by-word)
+              ("C-TAB" . copilot-accept-completion-by-word)
+              ("C-n" . copilot-next-completion)
+              ("C-p" . copilot-previous-completion)))
